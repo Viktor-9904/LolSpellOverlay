@@ -46,7 +46,8 @@ jobs:
         git push https://x-access-token:$GH_PAT@github.com/${{ github.repository }} latest --force
 
     - name: Wait a few seconds for GitHub to recognize tag
-      run: timeout 5
+      shell: pwsh
+      run: Start-Sleep -Seconds 5
 
     - name: Create or update Latest Release
       id: create_release
