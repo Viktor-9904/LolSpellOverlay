@@ -51,6 +51,11 @@
                     300),
 
                 new SummonerSpellData(
+                    "UnleashedTeleport",
+                    "pack://application:,,,/LolSpellOverlay;component/Icons/SummonerSpells/Unleashed_Teleport.png",
+                    260),
+
+                new SummonerSpellData(
                     "Ignite",
                     "pack://application:,,,/LolSpellOverlay;component/Icons/SummonerSpells/Ignite.png",
                     180),
@@ -59,11 +64,6 @@
                     "Ghost",
                     "pack://application:,,,/LolSpellOverlay;component/Icons/SummonerSpells/Ghost.png",
                     240),
-
-                //new SummonerSpellData(
-                //    "UnleashedTeleport",
-                //    "pack://application:,,,/LolSpellOverlay;component/Icons/SummonerSpells/Unleashed_Teleport.png",
-                //    330),
 
                 new SummonerSpellData(
                     "Smite",
