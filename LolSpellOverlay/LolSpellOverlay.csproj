@@ -42,6 +42,7 @@
     <None Remove="Icons\SummonerSpells\Ignite.png" />
     <None Remove="Icons\SummonerSpells\Smite.png" />
     <None Remove="Icons\SummonerSpells\Teleport.png" />
+    <None Remove="Sounds\notificationSound.wav" />
   </ItemGroup>
 
   <ItemGroup>
@@ -106,6 +107,9 @@
     <Resource Include="Icons\SummonerSpells\UnleashedTeleport.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Content Include="Sounds\notificationSound.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

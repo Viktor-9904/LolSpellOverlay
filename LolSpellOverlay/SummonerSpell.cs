@@ -1,6 +1,7 @@
-﻿using System.ComponentModel;
+﻿using System.IO;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Windows.Documents;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 
@@ -8,11 +9,19 @@ namespace LolSpellOverlay
 {
     public class SummonerSpell : INotifyPropertyChanged
     {
+        private MediaPlayer player;
+
         public SummonerSpell()
         {
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += Timer_Tick;
+
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sounds", "notificationSound.wav");
+
+            player = new MediaPlayer();
+            player.Open(new Uri(path));
+            player.Volume = 0.15;
         }
 
         private string name = string.Empty;
@@ -74,6 +83,12 @@ namespace LolSpellOverlay
 
         private void Timer_Tick(object? sender, EventArgs e)
         {
+            if (RemainingCooldown == 20)
+            {
+                player.Stop();
+                player.Play();
+            }
+
             if (RemainingCooldown > 0 && RemainingCooldown - 1 > 0)
             {
                 RemainingCooldown--;
