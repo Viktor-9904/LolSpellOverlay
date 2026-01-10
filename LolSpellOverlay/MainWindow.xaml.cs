@@ -1,5 +1,7 @@
-﻿using System.Windows;
+﻿using System.Runtime.InteropServices;
+using System.Windows;
 using System.Windows.Input;
+using System.Windows.Interop;
 
 namespace LolSpellOverlay
 {
@@ -13,6 +15,24 @@ namespace LolSpellOverlay
             InitializeComponent();
             DataContext = this;
         }
+
+        protected override void OnSourceInitialized(EventArgs e)
+        {
+            base.OnSourceInitialized(e);
+
+            var hwnd = new WindowInteropHelper(this).Handle;
+            int exStyle = GetWindowLong(hwnd, GWL_EXSTYLE);
+            SetWindowLong(hwnd, GWL_EXSTYLE, exStyle | WS_EX_NOACTIVATE);
+        }
+
+        const int GWL_EXSTYLE = -20;
+        const int WS_EX_NOACTIVATE = 0x08000000;
+
+        [DllImport("user32.dll")]
+        static extern int GetWindowLong(IntPtr hWnd, int nIndex);
+
+        [DllImport("user32.dll")]
+        static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
