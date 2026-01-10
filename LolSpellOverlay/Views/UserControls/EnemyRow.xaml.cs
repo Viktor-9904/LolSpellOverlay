@@ -36,6 +36,13 @@ namespace LolSpellOverlay.Views.UserControls
                 typeof(EnemyRow),
                 new PropertyMetadata(string.Empty, OnInitialSpell_F));
 
+        public static readonly DependencyProperty Spell_G_Property =
+            DependencyProperty.Register(
+                nameof(Spell_G),
+                typeof(string),
+                typeof(EnemyRow),
+                new PropertyMetadata(string.Empty, OnInitialSpell_G));
+
         public string Lane
         {
             get => (string)GetValue(LaneProperty);
@@ -52,6 +59,11 @@ namespace LolSpellOverlay.Views.UserControls
         {
             get => (string)GetValue(Spell_F_Property);
             set => SetValue(Spell_F_Property, value);
+        }
+        public string Spell_G
+        {
+            get => (string)GetValue(Spell_G_Property);
+            set => SetValue(Spell_G_Property, value);
         }
 
         public BitmapImage LaneImage { get; set; }
@@ -112,6 +124,17 @@ namespace LolSpellOverlay.Views.UserControls
             if (!string.IsNullOrEmpty(spellName))
             {
                 control.Spell_F = spellName;
+            }
+        }
+
+        private static void OnInitialSpell_G(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var control = (EnemyRow)d;
+            var spellName = (string)e.NewValue;
+
+            if (!string.IsNullOrEmpty(spellName))
+            {
+                control.Spell_G = spellName;
             }
         }
 

@@ -42,6 +42,7 @@
     <None Remove="Icons\SummonerSpells\Ignite.png" />
     <None Remove="Icons\SummonerSpells\Smite.png" />
     <None Remove="Icons\SummonerSpells\Teleport.png" />
+    <None Remove="Icons\SummonerSpells\TopQuestTeleport.png" />
     <None Remove="Sounds\notificationSound.wav" />
   </ItemGroup>
 
@@ -102,6 +103,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Icons\SummonerSpells\Teleport.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\SummonerSpells\TopQuestTeleport.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Icons\SummonerSpells\UnleashedTeleport.png">

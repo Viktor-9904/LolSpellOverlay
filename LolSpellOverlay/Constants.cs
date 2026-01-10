@@ -52,10 +52,15 @@ namespace LolSpellOverlay
                     "pack://application:,,,/LolSpellOverlay;component/Icons/SummonerSpells/Teleport.png",
                     300),
 
+                //new SummonerSpellData(
+                //    "UnleashedTeleport",
+                //    "pack://application:,,,/LolSpellOverlay;component/Icons/SummonerSpells/UnleashedTeleport.png",
+                //    260),
+
                 new SummonerSpellData(
-                    "UnleashedTeleport",
-                    "pack://application:,,,/LolSpellOverlay;component/Icons/SummonerSpells/UnleashedTeleport.png",
-                    260),
+                    "TopQuestTeleport",
+                    "pack://application:,,,/LolSpellOverlay;component/Icons/SummonerSpells/TopQuestTeleport.png",
+                    420),
 
                 new SummonerSpellData(
                     "Ignite",

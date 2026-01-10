@@ -10,10 +10,11 @@
         ResizeMode="NoResize"
         AllowsTransparency="True"
         Topmost="True"
-        Title="Spell Overlay" Height="200" Width="120"
+        Title="Spell Overlay" Height="200" Width="140"
         Background="#AA000000"
         MouseLeftButtonDown="Window_MouseLeftButtonDown"
         Loaded="Window_Loaded">
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.2*"/>
@@ -25,16 +26,17 @@
 
         <userControls:EnemyRow 
             Grid.Row="0"
-            Width="120" Height="30"
+            Width="140" Height="30"
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
             Lane="Top"
             Spell_D="Flash"
-            Spell_F="Teleport"/>
+            Spell_F="Ignite"
+            Spell_G="TopQuestTeleport"/>
 
         <userControls:EnemyRow 
             Grid.Row="1"
-            Width="120" Height="30"
+            Width="140" Height="30"
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
             Lane="Jungle"
@@ -43,7 +45,7 @@
 
         <userControls:EnemyRow 
             Grid.Row="2"
-            Width="120" Height="30"
+            Width="140" Height="30"
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
             Lane="Mid"
@@ -52,16 +54,16 @@
 
         <userControls:EnemyRow 
             Grid.Row="3"
-            Width="120" Height="30"
+            Width="140" Height="30"
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
             Lane="Bot"
             Spell_D="Flash"
-            Spell_F="Heal"/>
+            Spell_F="Barrier"/>
 
         <userControls:EnemyRow 
             Grid.Row="4"
-            Width="120" Height="30"
+            Width="140" Height="30"
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
             Lane="Support"
